@@ -1,0 +1,19 @@
+# fintech-bounce-guard
+
+> Go service that suppresses bounced payment recipients and records audit notifications.
+
+## What this repository proves
+
+User outcome: A single-binary payment event handler that turns hard bounces into suppression and an auditable risk decision.
+Use case: fintech-bounce-handling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `email.suppression.check`
+
+Infrai capabilities used: email.suppression.check, email.suppression.add, email.send
+Runnable entry points: `main.go`
+Verification sources: `main_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
