@@ -42,3 +42,7 @@ The example above is intentionally small. For real traffic, you will want a few 
 - **Fintech Bounce Guard:** By default, mail uses a **shared** verified sender. That is fine for tests, but you get a generic From, limited volume, and shared reputation.
 - **Fintech Bounce Guard:** For production, verify **your own** domain: `POST /v1/email/domain/verify` with `{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with `from: "you@mail.yourco.com"`.
 - **Fintech Bounce Guard:** Use a dedicated subdomain and **warm it up** by ramping volume over a few days. That helps protect deliverability.
+
+## Further reading
+
+- [Receipt Email API Providers: A Guide to US Deliverability Evidence](docs/receipt-email-api-providers-a-guide-to-us-deliver-7kp1n6.md)
